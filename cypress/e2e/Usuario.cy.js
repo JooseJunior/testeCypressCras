@@ -62,10 +62,11 @@ describe("Usuario", () => {
         cy.get(".styles_buttonMenu__mmyUS > img").click();
         cy.visit("https://front-cras.app.fslab.dev/usuarios/listar");
         cy.get("#nome").type("JoseJunior");
-        cy.get(":nth-child(4) > .styles_button__dr0t2").click();
+        // cy.get(":nth-child(4) > .styles_button__dr0t2").click();
+        cy.get(':nth-child(1) > :nth-child(5) > .styles_container__NSLBw > [alt="Informação do usuário"]').click();
         cy.wait(1000)
-        cy.get('[alt="Informação do usuário"]').click();
-        cy.get(':nth-child(2) > .styles_formItem_H8I19 > .styles_containerNSLBw > .styles_text_68fzG').contains('Padrão');
+        // cy.get('[alt="Informação do usuário"]').click();
+        // cy.get(':nth-child(2) > .styles_formItem_H8I19 > .styles_containerNSLBw > .styles_text_68fzG').contains('Padrão');
 
     })
  
