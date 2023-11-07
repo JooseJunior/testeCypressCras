@@ -69,7 +69,6 @@ describe("Usuario", () => {
         cy.wait(1000)
         // cy.get('[alt="Informação do usuário"]').click();
         // cy.get(':nth-child(2) > .styles_formItem_H8I19 > .styles_containerNSLBw > .styles_text_68fzG').contains('Padrão');
-
     })
  
   });
