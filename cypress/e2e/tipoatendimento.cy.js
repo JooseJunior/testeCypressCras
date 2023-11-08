@@ -6,8 +6,8 @@ describe("Tipo de atendimento", () => {
         cy.get('.styles_button__dr0t2').click();
       })
 
-    it("Deve cadastrar tipo de atendimento com todos os campos preenchidos", () =>{
-        
+    it.skip("Deve cadastrar tipo de atendimento com todos os campos preenchidos", () =>{
+
     })
 
     it.skip("Deve retornar msg de campos obrigatórios", () =>{

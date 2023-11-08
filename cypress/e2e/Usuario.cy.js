@@ -1,3 +1,7 @@
+import fake from "faker-br"
+
+var nomeFaker = fake.name.firstName();
+
 describe("Usuario", () => {
     beforeEach(() =>{
         cy.visit('https://front-cras.app.fslab.dev/');
@@ -7,13 +11,16 @@ describe("Usuario", () => {
       })
 
     //Coloquei skip, pois precisa toda vez, trocar o email, nao deixa cadastrar o mesmo email
-    it.skip("Deve realizar cadastro de um usuário com status ativo - cenário de sucesso", () =>{
+    it("Deve realizar cadastro de um usuário com status ativo - cenário de sucesso", () =>{
         cy.get('.styles_buttonMenu__mmyUS > img').click();
         cy.visit("https://front-cras.app.fslab.dev/usuarios/listar")
         cy.get(":nth-child(5) > .styles_button__dr0t2").click()
-        cy.get("#nomeCadastrar").type("JoseJunior");
-        cy.get("#emailCadastrar").type("josejunior10@gmail.com");
-        cy.get("#senhaCadastrar").type("Jose@123");
+        cy.get("#nomeCadastrar").type(nomeFaker);
+        cy.wait(5000)
+        cy.get("#emailCadastrar").type(fake.internet.email());
+        cy.wait(5000)
+        cy.get("#senhaCadastrar").type(fake.internet.password() + "@123");
+        cy.wait(5000)
         cy.get('#unidadeCadastrar').select('CRAS - Vilhena')
         cy.get('#grupoCadastrar').select('Administrador')
         cy.get('[type="submit"]').click();

@@ -6,7 +6,7 @@ describe("Pessoas", () => {
         cy.get('.styles_button__dr0t2').click();
       })
 
-    it("Deve cadastrar pessoa com todos os campos preenchidos", () =>{
+    it.skip("Deve cadastrar pessoa com todos os campos preenchidos", () =>{
         
     })
 

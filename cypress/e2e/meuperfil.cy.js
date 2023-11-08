@@ -8,7 +8,7 @@ describe("Meu Perfil", () => {
 
 
     // obs: para o caso de teste acima é nescessário escolher ou usuario para não impedir os outros teste não altere a senha do dev@gmail.com, após a alteração realize login para confirmar a alteração da senha.
-    it("Deve alterar os campos e a senha", () =>{
+    it.skip("Deve alterar os campos e a senha", () =>{
         
     })
 });

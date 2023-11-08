@@ -6,7 +6,7 @@ describe("Atendimentos", () => {
         cy.get('.styles_button__dr0t2').click();
       })
 
-    it("Deve alterar os dados do atendimento cadastrado", () =>{
+    it.skip("Deve alterar os dados do atendimento cadastrado", () =>{
         
     })
 
